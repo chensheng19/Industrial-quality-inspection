@@ -36,7 +36,7 @@ list_file = open('./%s.txt'%(image_set),'w')
 for image in files:
     list_file.write('/mnt/3/%s'%(image))
     image_id = image.split('.')[0]
-    if image == "train":
+    if image_set == "train":
         decode_json(image_set,image_id,list_file)
     list_file.write('\n')
 list_file.close()
